@@ -1,0 +1,92 @@
+{
+    "info": {
+        "id": "446389",
+        "name": "Mittal Foods",
+        "cloudinaryImageId": "09293a7d13978ad5f1217ac709324401",
+        "locality": "Saraswatikund",
+        "areaName": "Shankar_Vihar",
+        "costForTwo": "₹300 for two",
+        "cuisines": [
+            "Chinese",
+            "North Indian"
+        ],
+        "avgRating": 4,
+        "veg": true,
+        "feeDetails": {
+            "restaurantId": "446389",
+            "fees": [
+                {
+                    "name": "BASE_DISTANCE",
+                    "fee": 1800
+                },
+                {
+                    "name": "BASE_TIME"
+                },
+                {
+                    "name": "ANCILLARY_SURGE_FEE"
+                }
+            ],
+            "totalFee": 1800
+        },
+        "parentId": "268846",
+        "avgRatingString": "4.0",
+        "totalRatingsString": "1K+",
+        "sla": {
+            "deliveryTime": 27,
+            "lastMileTravel": 3.9,
+            "serviceability": "SERVICEABLE",
+            "slaString": "27 mins",
+            "lastMileTravelString": "3.9 km",
+            "iconType": "ICON_TYPE_EMPTY"
+        },
+        "availability": {
+            "nextCloseTime": "2023-10-20 23:30:00",
+            "opened": true
+        },
+        "badges": {
+            "imageBadges": [
+                {
+                    "imageId": "v1695133679/badges/Pure_Veg111.png",
+                    "description": "pureveg"
+                }
+            ]
+        },
+        "isOpen": true,
+        "type": "F",
+        "badgesV2": {
+            "entityBadges": {
+                "imageBased": {
+                    "badgeObject": [
+                        {
+                            "attributes": {
+                                "description": "pureveg",
+                                "imageId": "v1695133679/badges/Pure_Veg111.png"
+                            }
+                        }
+                    ]
+                },
+                "textBased": {},
+                "textExtendedBadges": {}
+            }
+        },
+        "aggregatedDiscountInfoV3": {
+            "header": "FREE ITEM"
+        },
+        "differentiatedUi": {
+            "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+            "differentiatedUiMediaDetails": {
+                "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                "lottie": {},
+                "video": {}
+            }
+        },
+        "reviewsSummary": {},
+        "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+        "restaurantOfferPresentationInfo": {}
+    },
+    "analytics": {},
+    "cta": {
+        "link": "https://www.swiggy.com/restaurants/mittal-foods-saraswatikund-shankar-vihar-mathura-446389",
+        "type": "WEBLINK"
+    }
+}
