@@ -51,12 +51,11 @@ const Body = () => {
   return listofRestaurants?.length === 0 ? (
     <Shimmer />
   ) : (
-    <div className="w-full mr-40 mb-10">
-      <div className="flex items-center mt-10 mb-10 ml-[190px]">
+    <div className="body">
+      <div className="flex justify-start items-center mt-10 ml-[170px] mb-10 w-full">
         <div className="flex justify-center items-center mr-4">
           <input
             type="text"
-            data-testid="searchInput"
             className="w-80 h-10 border-[1px] border-gray-300 m-2 rounded-md p-3 outline-none focus-within:border-gray-400 "
             placeholder="Search for Chicken Biryani"
             value={searchText}
@@ -66,7 +65,7 @@ const Body = () => {
           />
 
           <button
-            className="hover:drop-shadow-xl bg-gradient-to-r from-orange-500 to-amber-500 h-10 text-white p-1 w-28 rounded-md flex justify-center items-center"
+            className="bg-gradient-to-r from-orange-500 to-amber-500 h-10 text-white p-1 w-28 rounded-md flex justify-center items-center"
             onClick={() => {
               const filteredList = listofRestaurants.filter((res) =>
                 res.info.name.toLowerCase().includes(searchText?.toLowerCase())
@@ -93,7 +92,7 @@ const Body = () => {
           </button>
         </div>
         <button
-          className="hover:drop-shadow-xl bg-gradient-to-r from-green-500 to-emerald-500 text-white p-1 rounded-md w-48 h-10"
+          className="bg-gradient-to-r from-green-500 to-emerald-500 text-white p-1 rounded-md w-48 h-10"
           onClick={() => {
             filterdata = listofRestaurants.filter(
               (res) => res.info.avgRating > 4
@@ -108,25 +107,25 @@ const Body = () => {
 
         <div className="ml-5">
           <label htmlFor="">UserName : </label>
-          <input className="border-[1px] border-gray-300 m-2 rounded-md p-2 text-gray-400 outline-none focus-within:border-gray-400" type="text" onChange={(e) => setUserName(e.target.value)} value={LoggedInUser}/>
+          <input className="border border-black p-2" type="text" onChange={(e) => setUserName(e.target.value)} value={LoggedInUser}/>
         </div>
       </div>
 
 {/* ----------------------------------------------------------------------------------------------- */}
 
       <div className="">
-        <h1 className="font-bold text-2xl font-sans mb-7 ml-[192px] text-gray-800">
+        <h1 className="font-bold text-2xl font-sans mb-7 ml-[174px] text-gray-800">
           Restaurants with online food delivery in Mathura
         </h1>
       </div>
-      <div className="flex flex-wrap justify-start mx-[180px]">
+      <div className="flex flex-wrap ml-40 mr-40">
         {FilteredRestaurant?.map((restaurant) => (
           <Link
             className="Text"
             key={restaurant?.info?.id}
             to={"/restaurants/" + restaurant?.info?.id}
           >
-            {restaurant?.info?.aggregatedDiscountInfoV3 ? 
+            {restaurant?.info?.veg ? 
               <EnhancedComponent resData={restaurant} /> :
               <RestaurantCard resData={restaurant} />
             }

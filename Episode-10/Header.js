@@ -1,22 +1,13 @@
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { LOGO_URL } from "../utils/constants";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
-// import swiggylogo from "../utils/swiggylogo";
-import UserContext from "../utils/UserContext";
-import { useSelector } from "react-redux";
-import Yumbite from '../utils/yumbite.png'
+import swiggylogo from "../utils/swiggylogo.png";
 
 const Header = () => {
   const [btnName, setBtnName] = useState("Login");
 
   const onlineStatus = useOnlineStatus();
-
-  const { LoggedInUser } = useContext(UserContext);
-
-  // Subscribing to the store using a selector
-
-  const cartItems = useSelector((store) => store.cart.items);
 
   // console.log("header render");
 
@@ -24,26 +15,27 @@ const Header = () => {
   // If there is empty dependency array => [], then useEffect will be called on initial render only(just once)
   // If [btnName] is passed as a dependency, then useEffect will be called only when there is a updation in [btnName]
 
-  // useEffect(() => {
-  //   console.log("useEffect called");
-  // }, [btnName]);
+  useEffect(() => {
+    console.log("useEffect called");
+  }, [btnName]);
 
   return (
-    <div className="flex justify-evenly items-center bg-white shadow-md h-[70px] sticky top-0 z-50 w-full">
+    <div className="flex justify-evenly items-center bg-white shadow-lg h-20">
       <div className="w-36 flex justify-between items-center -ml-9">
         <Link to="/">
           <img
-            className="mt-2 h-28 object-cover"
-            src={Yumbite}
+            className="w-9 h-12 ml-4 hover:w-10  transition ease-in-out duration-150 hover:scale-105"
+            src={swiggylogo}
             alt="logo"
           />
         </Link>
+        <p className="">Mathura</p>
       </div>
       <div className="flex items-center">
         <ul className="flex m-3 p-2 font-medium justify-center items-center">
-          <li className="px-4 hover:cursor-pointer">
+          {/* <li className="px-4">
             <p>Online Status : {onlineStatus ? "✅" : "🔴"}</p>
-          </li>
+          </li> */}
           <li className="px-4 hover:text-orange-500">
             <Link
               to="/"
@@ -102,13 +94,11 @@ const Header = () => {
           </li> */}
           <li className="px-4 hover:text-orange-500">
             <Link
-              to="/cart"
-              className=" flex justify-center items-center hover:fill-orange-500 hover:text-orange-500 text-gray-700 fill-gray-700"
+              to="/"
+              className="w-24 flex justify-center items-center hover:fill-orange-500 hover:text-orange-500 text-gray-700 fill-gray-700"
             >
-              <span>Cart</span>
-              <div className="flex ml-1">
               <svg
-                className="w-6 h-6 pr-2 "
+                className="w-6 h-6 pr-2 -ml-6"
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
                 height="24"
@@ -116,19 +106,17 @@ const Header = () => {
               >
                 <path d="M10 19.5c0 .829-.672 1.5-1.5 1.5s-1.5-.671-1.5-1.5c0-.828.672-1.5 1.5-1.5s1.5.672 1.5 1.5zm3.5-1.5c-.828 0-1.5.671-1.5 1.5s.672 1.5 1.5 1.5 1.5-.671 1.5-1.5c0-.828-.672-1.5-1.5-1.5zm1.336-5l1.977-7h-16.813l2.938 7h11.898zm4.969-10l-3.432 12h-12.597l.839 2h13.239l3.474-12h1.929l.743-2h-4.195z" />
               </svg>
-              <span className="flex items-center px-2 text-xs relative right-[14px] bottom-[10px] bg-orange-400 text-white rounded-3xl">{cartItems.length}</span>
-              </div>
+              <span>Cart</span>
             </Link>
           </li>
           <button
-            className="bg-orange-400 w-20 py-2 mx-2 text-white rounded-lg hover:text-orange-500 hover:bg-white hover:border-orange-500 hover:border-2"
+            className="bg-amber-500 w-20 pt-2 pb-2 text-white rounded-lg hover:text-orange-500 hover:bg-white hover:border-orange-500 hover:border-2"
             onClick={() =>
               btnName === "Login" ? setBtnName("LogOut") : setBtnName("Login")
             }
           >
             {btnName}
           </button>
-          <div className="font-bold ml-3"><p className="font-medium">{LoggedInUser}</p></div>
         </ul>
       </div>
     </div>

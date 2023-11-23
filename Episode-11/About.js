@@ -15,13 +15,13 @@ class About extends Component {
 
   render() {
     // console.log("Parent render")
-
     return (
       <>
-        <div className="font-bold my-14 mx-10 text-3xl flex">
-          <p className="text-black">User :&nbsp;</p>
+        <h1>About Us Page</h1>
+        <div className="font-bold">
+          User :
           <UserContext.Consumer>
-            {({ LoggedInUser }) => <h4>{LoggedInUser}👋</h4> }
+            {({ LoggedInUser }) => <h4>{LoggedInUser}</h4>}
           </UserContext.Consumer>
         </div>
         <UserClass name={"First Child"} location={"Govind Nagar"} />

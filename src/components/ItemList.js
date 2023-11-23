@@ -2,11 +2,21 @@ import { useDispatch } from "react-redux";
 import { MENU_IMG } from "../utils/constants";
 import Veglogo from "../utils/veg-logo.png";
 import { addItem } from "../utils/cartSlice";
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 const ItemList = ({ items }) => {
+
+  const showToastMessage = () => {
+    toast.success('Item added to cart !', {
+        position: toast.POSITION.BOTTOM_CENTER
+    });
+};
+
   const dispatch = useDispatch();
 
   const handleAddItem = (item) => {
+    showToastMessage();
     // dispatch an action
     dispatch(addItem(item));
   };
@@ -45,6 +55,7 @@ const ItemList = ({ items }) => {
           </div>
         </div>
       ))}
+      <ToastContainer />
     </div>
   );
 };

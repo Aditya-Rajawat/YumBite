@@ -1,5 +1,6 @@
-EPISODE-1 (Inception)
+Namaste-React webseries 🚀
 
+<<<<<<< HEAD
 Topics covered : 
 
 1. How to add & make changes to an element using JavaScript, React & HTML.
@@ -25,3 +26,6 @@ Epsiode-4
 // - Links
 // - Address
 // - Contact
+=======
+by Akshay Saini
+>>>>>>> 937f0f89810b70c77d25b6e774cfb9587081cdc8

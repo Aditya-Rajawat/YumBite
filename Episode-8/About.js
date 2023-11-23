@@ -1,6 +1,5 @@
 import { Component } from "react";
 import UserClass from "./UserClass";
-import UserContext from "../utils/UserContext";
 
 class About extends Component {
   constructor(props) {
@@ -15,15 +14,9 @@ class About extends Component {
 
   render() {
     // console.log("Parent render")
-
     return (
       <>
-        <div className="font-bold my-14 mx-10 text-3xl flex">
-          <p className="text-black">User :&nbsp;</p>
-          <UserContext.Consumer>
-            {({ LoggedInUser }) => <h4>{LoggedInUser}👋</h4> }
-          </UserContext.Consumer>
-        </div>
+        <h1>About Us Page</h1>
         <UserClass name={"First Child"} location={"Govind Nagar"} />
       </>
     );

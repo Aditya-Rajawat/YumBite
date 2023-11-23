@@ -5,6 +5,9 @@ module.exports = {
     extend: {
       fontFamily: {
         OpenSans : ['Open Sans', "sans-serif"]
+      },
+      zIndex : {
+        '100': '100',
       }
     },
   },
