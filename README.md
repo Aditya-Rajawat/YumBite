@@ -52,3 +52,8 @@ CSS. Shimmer UI is implemented so as to increase user experience. Jest library i
   ```
   npm i react-toastify
   ```
+  
+- Don't forget to install CORS chrome extension before running app on localhost
+  ```
+  https://chromewebstore.google.com/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf?pli=1
+  ```
