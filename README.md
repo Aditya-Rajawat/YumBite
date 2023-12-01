@@ -2,7 +2,7 @@
 
 - *A Food restaurant app which offers wide variety of food and desserts to customers. The data is fetched using Swiggy live
 API. Lazy loading and Code splitting are being used for optimising the app. Users can add and remove items from
-cart.Redux Toolkitlibrary is used for managing the state at the top level hierarchy. Components are styled using Tailwind
+cart. Redux Toolkit library is used for managing the state at the top level hierarchy. Components are styled using Tailwind
 CSS. Shimmer UI is implemented so as to increase user experience. Jest library is used fortesting.*
 
 - *Live Link : https://yumbite.netlify.app/*
