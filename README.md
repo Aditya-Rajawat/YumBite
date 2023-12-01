@@ -11,13 +11,13 @@ CSS. Shimmer UI is implemented so as to increase user experience. Jest library i
 
   # *Setting up the project*
 
-  - Created react app from scratch without create-react-app/vite
+- Created create-react-app from scratch without create-react-app/vite
  
-  - - Install tailwindcss via npm, and create your tailwind.config.js file
-    ```
-    npm install -D tailwindcss
-    npx tailwindcss init
-    ```
+- Install tailwindcss via npm, and create your tailwind.config.js file
+  ```
+  npm install -D tailwindcss
+  npx tailwindcss init
+  ```
   
 - Configure your template paths
   ```
@@ -36,4 +36,9 @@ CSS. Shimmer UI is implemented so as to increase user experience. Jest library i
   @tailwind base;
   @tailwind components;
   @tailwind utilities;
+  ```
+  
+- Install React Router DOM
+  ```
+  npm i react-router-dom
   ```
